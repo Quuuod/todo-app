@@ -7,6 +7,6 @@ import { MainPage } from "./main";
 export const Router: FC = () => (
   <Routes>
     <Route path="*" element={<NotFoundPage />} />
-    <Route path="/" element={<MainPage />} />
+    <Route path="/main" element={<MainPage />} />
   </Routes>
 );

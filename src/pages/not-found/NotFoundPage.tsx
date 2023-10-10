@@ -7,7 +7,7 @@ export const NotFoundPage = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/");
+    navigate("/main");
   };
 
   return (

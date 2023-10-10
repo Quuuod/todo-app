@@ -55,14 +55,16 @@ export const TaskForm = ({
   const { titleConfig, descriptionConfig, typeConfig } = useFormItemConfigs();
 
   const handleFinish = async (fieldValues: ITaskFormItems) => {
-    const res = getParameters(fieldValues);
-    const id = todo ? todo.id : "";
-    isEdit
-      ? (mutation.mutate({ id, ...res }), setModal())
-      : mutation.mutate(getParameters(fieldValues));
+    if (localStorage.user) {
+      const res = getParameters(fieldValues);
+      const id = todo ? todo.id : "";
+      isEdit
+        ? (mutation.mutate({ id, ...res }), setModal())
+        : mutation.mutate(getParameters(fieldValues));
 
-    form.resetFields();
-    success(msg);
+      form.resetFields();
+      success(msg);
+    } else error("Please choose or create user");
   };
 
   const handleFinishFailed = (errorInfo: any) => {
