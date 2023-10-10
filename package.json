@@ -2,7 +2,7 @@
 	"name": "react-hooks",
 	"version": "0.1.0",
 	"private": true,
-	"homepage":"https://Quuuod.github.io/main",
+	"homepage":"https://Quuuod.github.io/todo-app",
 	"dependencies": {
 		"@ant-design/icons": "^5.2.6",
 		"@testing-library/jest-dom": "^5.16.5",
